@@ -7,3 +7,4 @@ before_install:
  
 script:
   - xbuild TodaysDate.sln
+  - nunit.sh TodaysDate.Test/bin/Debug/TodaysDate.Test.dll
