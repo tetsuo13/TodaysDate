@@ -1,10 +1,13 @@
 ﻿language: c
- 
+
+env:
+  - EnableNuGetPackageRestore=true
+
 before_install:
   - sudo apt-get update -qq > /dev/null
   - sudo apt-get install -qq mono-devel mono-gmcs > /dev/null
   - mozroots --import --sync
- 
+
 script:
   - xbuild TodaysDate.sln
   - nunit.sh TodaysDate.Test/bin/Debug/TodaysDate.Test.dll
